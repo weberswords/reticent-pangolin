@@ -11,10 +11,9 @@ tuition = 0
 stud_done = 0
 final_total = 0
 invalid_request = 0
-# stud_processed = tuition_input.readline()
-# stud_processed = int(stud_processed)
-stud_processed = 3
-print("Students to process: %d" % stud_processed)
+stud_processed = tuition_input.readline()
+stud_processed = int(stud_processed)
+# stud_processed = 3
 
 for line in tuition_input:
     total_due = 0
@@ -30,11 +29,16 @@ for line in tuition_input:
             tuition = int(line[2])*rCredit
             total_due += tuition
             print("Residency: resident")
+            print("Credits: %d" % credits)
+            print("Tuition: $ %d" % tuition)
         elif residency.upper() == "N":
             tuition = credits*nrCredit
             total_due += tuition
             total_due += nrfee
             print("Residency: non-resident")
+            print("Credits: %d" % credits)
+            print("Non-resident Fee: $ 6200")
+            print("Tuition: $ %d" % tuition)
             housing = line[4]
             if housing.upper() == "O":
                 pass
@@ -45,17 +49,15 @@ for line in tuition_input:
                 if meal_plan.upper() == "N":
                     pass
                 elif meal_plan.upper() == "M":
-                    total_due =+ meal_fee
+                    total_due += meal_fee
                     print("Meals: $ %d" % meal_fee)
             else:
                 pass
-        print("Credits: %d" % credits)
-        print("Tuition: $ %d" % tuition)
         print("Total Due: $ %d" % total_due)
     final_total += total_due
     stud_done += 1
-    print(stud_done)
-
+    if stud_done == stud_processed:
+        break
 print("\nFINAL TOTALS")
 print("Valid request count: %d" % stud_processed)
 print("Invalid request count: %d" % invalid_request)
