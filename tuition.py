@@ -23,6 +23,12 @@ for line in tuition_input:
         initials = line[1]
         credits = int(line[2])
         residency = line[3]
+        if credits not in range(1,22):
+            invalid_request += 1
+            print("\n%s" % student_ID)
+            print(initials)
+            print("You have either too few or too many credits. \nPlease check and try again.")
+            continue
         print("\nStudent ID: %s" % student_ID)
         print("Student Initials: %s" % initials.upper())
         if residency.upper() == "R":
@@ -59,7 +65,8 @@ for line in tuition_input:
     if stud_done == stud_processed:
         break
 print("\nFINAL TOTALS")
-print("Valid request count: %d" % stud_processed)
+valid_request = stud_processed - invalid_request
+print("Valid request count: %d" % valid_request)
 print("Invalid request count: %d" % invalid_request)
 print("Total fees due: $ %d" % final_total)
 
