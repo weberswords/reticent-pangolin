@@ -6,30 +6,30 @@ while True:
     fraction_list = fraction.split()
     numerator = int(fraction_list[0])
     denominator = int(fraction_list[2])
-
     if len(fraction_list) < 3:
         print("That's not how you type that. Did you forget a space?")
     if denominator == 0:
         print("You can't have 0 as a denominator. Try again.")
         exit()
-    #print fraction
-        print ("Your fraction is %d / %d" % (numerator, denominator))
+    print ("Your fraction is %d/%d" % (numerator, denominator))
 
     whole_num = int(numerator/denominator)
     remainder = abs(numerator % denominator)
     ans_denom = abs(denominator)
 
     for number in range(1, ans_denom):
-        if ans_denom % number == 0:
+        if ans_denom % number == 0 and remainder % number == 0:
             gcf = number
+            print(gcf)
 
-    remainder = remainder/gcf
+    end_remain = remainder/gcf
+    print(end_remain)
     ans_denom = ans_denom/gcf
+    print(ans_denom)
 
-    #print whole number with fraction
-    if remainder == 0:
+    if end_remain == 0:
         print("%d/%d = %d" % (numerator, denominator, whole_num))
     elif whole_num == 0:
-        print("%d/%d = %d/%d" % (numerator, denominator, remainder, ans_denom))
+        print("%d/%d = %d/%d" % (numerator, denominator, end_remain, ans_denom))
     else:
-        print("%d/%d = %d %d/%d" % (numerator, denominator, whole_num, remainder, ans_denom))
+        print("%d/%d = %d %d/%d" % (numerator, denominator, whole_num, end_remain, ans_denom))
