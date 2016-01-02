@@ -20,12 +20,9 @@ while True:
     for number in range(1, ans_denom):
         if ans_denom % number == 0 and remainder % number == 0:
             gcf = number
-            print(gcf)
 
     end_remain = remainder/gcf
-    print(end_remain)
     ans_denom = ans_denom/gcf
-    print(ans_denom)
 
     if end_remain == 0:
         print("%d/%d = %d" % (numerator, denominator, whole_num))
