@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a super long sentences for testing what's going on with all this stuff long facts are cool yes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-uf-b2R">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a super long sentences for testing what's going on with all this stuff long facts are cool yes." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsf-uf-b2R">
                                 <rect key="frame" x="16" y="240" width="560" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="dZ3-Td-sVZ"/>
@@ -85,15 +85,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="yjw-Zl-WHn" secondAttribute="trailing" id="1TP-cJ-enL"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZmF-v0-LSA" secondAttribute="bottom" constant="81" id="2pg-Oc-W7y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZmF-v0-LSA" secondAttribute="trailing" constant="20" id="88n-PH-Wyx"/>
-                            <constraint firstItem="fsf-uf-b2R" firstAttribute="top" secondItem="OU0-aY-emi" secondAttribute="bottom" constant="71" id="JDR-Ey-SkX"/>
                             <constraint firstItem="OU0-aY-emi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Lao-l6-vX4"/>
-                            <constraint firstItem="fsf-uf-b2R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="20" id="PgT-TV-xMt"/>
-                            <constraint firstItem="fsf-uf-b2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Z4f-Vy-3qk"/>
+                            <constraint firstItem="fsf-uf-b2R" firstAttribute="top" secondItem="OU0-aY-emi" secondAttribute="bottom" constant="71" id="bxq-si-FpU"/>
+                            <constraint firstItem="fsf-uf-b2R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="deU-mT-p1X"/>
                             <constraint firstItem="ZmF-v0-LSA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ebi-x9-R9A"/>
                             <constraint firstItem="yjw-Zl-WHn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="f55-5X-dlE"/>
                             <constraint firstItem="OU0-aY-emi" firstAttribute="top" secondItem="yjw-Zl-WHn" secondAttribute="bottom" constant="60" id="hf9-F0-0gT"/>
                             <constraint firstItem="yjw-Zl-WHn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="ijn-IU-WJ8"/>
-                            <constraint firstItem="fsf-uf-b2R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z4W-yt-q66"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fsf-uf-b2R" secondAttribute="trailing" constant="20" id="kaX-nh-goF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -104,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115.5" y="-40.5"/>
+            <point key="canvasLocation" x="-116" y="-41"/>
         </scene>
         <!--Add Fact View Controller-->
         <scene sceneID="fm4-Ck-Mu7">
@@ -123,7 +122,7 @@
                                 <state key="normal" title="Add My Knowledge"/>
                                 <connections>
                                     <action selector="addFact:" destination="JcX-jJ-wHM" eventType="touchUpInside" id="z4V-Bu-CGL"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VON-xw-EAB"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowCounterSegue" id="VON-xw-EAB"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pM-gk-ibe">

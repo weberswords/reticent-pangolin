@@ -9,32 +9,26 @@
 import UIKit
 
 
-var factModel = FactModel()
-var facts = factModel.facts
-
 class addFactViewController: UIViewController {
     
     @IBOutlet weak var newFactText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        funFactLabel.text = factModel.getRandomFact()
     }
     
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let DestViewController: ViewController = segue.destinationViewController as! ViewController
+            DestViewController.newFact = newFactText.text!
+            }
     
     @IBAction func addFact(sender: UIButton) {
-        let newFact = newFactText.text
-        if newFact == "" {
-            print("Error enter text")
-        }
-        else {
-            facts.addObject(newFact!)
-            
-        }
-        print(facts)
+//        
     }
-    
+
 }

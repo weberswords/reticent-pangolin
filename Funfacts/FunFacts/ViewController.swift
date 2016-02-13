@@ -10,23 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var addFact: UIBarButtonItem!
     @IBOutlet weak var funFactLabel: UILabel!
     @IBOutlet weak var FunFactButton: UIButton!
     
     
     var factModel = FactModel()
+    var newFact = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        funFactLabel.text = factModel.getRandomFact()
+//        funFactLabel.text = factModel.getRandomFact()
+        funFactLabel.text = newFact
+        factModel.facts.addObject(newFact)
         }
 
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    
     }
     
     @IBAction func funFactButton() {
