@@ -1,3 +1,3 @@
 #reticent pangolin
 
-This repo is a random collection of Python projects.
+This repo is a random collection of projects.
