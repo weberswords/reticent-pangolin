@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6FB3B49FE2495CCD24FA5D5281C251536EA808EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6FB3B49FE2495CCD24FA5D5281C251536EA808EC" : 0,
+    "3BB0F8B48FDBAA8145CA5823F84AFCA2EF4DD003" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B329B3EB-73B2-46BB-929A-4FD182009C9A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6FB3B49FE2495CCD24FA5D5281C251536EA808EC" : "reticent-pangolin\/",
+    "3BB0F8B48FDBAA8145CA5823F84AFCA2EF4DD003" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FunFacts",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FunFacts\/FunFacts.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/weberswords\/banking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3BB0F8B48FDBAA8145CA5823F84AFCA2EF4DD003"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/weberswords\/reticent-pangolin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6FB3B49FE2495CCD24FA5D5281C251536EA808EC"
+    }
+  ]
+}
