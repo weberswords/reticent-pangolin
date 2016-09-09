@@ -1,4 +1,5 @@
 # coding: utf-8
+#Created April 2016 with Pythonista for iOS
 
 import ui, datetime, time, clipboard, math
 
