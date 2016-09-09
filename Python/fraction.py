@@ -1,3 +1,5 @@
+#Created December 2015
+
 #This program will convert any fraction entered to its simplified whole number and fraction version. The input will be
 #ints for numerator, denominator, and the slash will be stored as a char value. The output will be int values for the
 #numerator and whole number if applicable. The denominator output will be absolute value of input denominator.
