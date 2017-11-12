@@ -6,10 +6,13 @@ import urllib
 import datetime
 import time
 
-url = urllib.urlopen('http://www.hoodlumcultured.com').read()
-soup = BeautifulSoup(url, "html.parser")
-body = soup.find_all('div', attrs={"class": "toc-body"})
-posts = soup.find_all('a', class_="cp-toc-item body-toc-item row-two-image row-three-image")
+
+def get_posts(url):
+	url = urllib.urlopen(url).read()
+	soup = BeautifulSoup(url, "html.parser")
+	body = soup.find_all('div', attrs={"class": "toc-body"})
+	posts = soup.find_all('a', class_="cp-toc-item body-toc-item row-two-image row-three-image")
+	return posts
 
 def get_post_containers(post):
 	return post.find_all("div", attrs={"class": "adjustment-container"})
@@ -58,6 +61,7 @@ def check_for_characters(xml):
 	pass
 
 with open('rss.xml', 'w+') as rss:
+	posts = get_posts('http://www.hoodlumcultured.com')
 	xml = add_posts_to_xml(posts)
 	rss.write(xml.encode('utf8'))
 	rss.close()
