@@ -55,8 +55,6 @@ def add_posts_to_xml(posts):
 	xml += "</channel></rss>"
 	return xml
 
-def check_for_characters(xml):
-	pass
 
 with open('rss.xml', 'w+') as rss:
 	posts = get_posts('http://www.hoodlumcultured.com')
