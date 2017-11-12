@@ -25,8 +25,6 @@ def get_formatted_post_date(date):
 	post_stamp = time.mktime(post_tuple)
 	return utils.formatdate(post_stamp)
 
-	return post_date.strftime("%a, %d %b %Y")
-
 def get_post_link(post):
 	base = "http://www.hoodlumcultured.com"
 	link = post['href']
