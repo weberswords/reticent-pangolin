@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from xml.sax.saxutils import escape
 from email import utils
+from dateutil import parser
 
 import urllib
 import datetime
@@ -18,9 +19,13 @@ def get_post_containers(post):
 	return post.find_all("div", attrs={"class": "adjustment-container"})
 
 def get_formatted_post_date(date):
-	days = int(filter(str.isdigit, str(date)))
 	today = datetime.datetime.today()
-	post_date = today - datetime.timedelta(days=days)
+	if "days" in date:
+		days = int(filter(str.isdigit, str(date)))
+		post_date = today - datetime.timedelta(days=days)
+	else:
+		post_date = parser.parse(date)
+
 	post_tuple = post_date.timetuple()
 	post_stamp = time.mktime(post_tuple)
 	return utils.formatdate(post_stamp)
